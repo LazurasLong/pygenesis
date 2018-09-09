@@ -11,12 +11,6 @@ FML. Anyways, if anyone is interested in helping out the development and maybe l
 
 A copy of the WarLite20 Core Rulebook will be added here to the repo as well.
 
-## TODO
-1. Alot.
-2. Get a better way to store the list information, maybe setup something with sqlite3. (It's already pretty ridiculous.)
-3. Make a better way to handle unique colorization for certain aspects. (Population being one, item rarity another.)
-4. Stop being ashamed of learning.
-
 # Structure
 Right now it's a flat file that pulls from another conf.py file. main.py and conf.py are the two major pieces at the moment. I might again depending on the tasks to do, setup an sql schema and get some tables fleshed out and load them with sqlite.. 
 Someone help me lol.
