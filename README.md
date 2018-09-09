@@ -16,7 +16,7 @@ Right now it's a flat file that pulls from another conf.py file. main.py and con
 Someone help me lol.
 
 # Instructions
-git clone https://github.com/dcrypt-sean/pygenesis  
+git clone https://github.com/dcrypt-sean/pygenesis.git  
 cd pygenesis/  
 chmod +x main.py  
 ./main.py  
