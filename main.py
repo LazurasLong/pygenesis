@@ -49,10 +49,31 @@ def menu():
     gnd = ['Male', 'Female']
 
     # Stats based off WarLite20 Rulebook(4d6 and the bonus is the total/2 rounded up)
-    p_stats = ra.randint(1, 24)
+    stg = ra.randint(1, 24)
+    agi = ra.randint(1, 24)
+    int = ra.randint(1, 24)
+
+    # HP
+    hit = stg + ra.randint(2, 24)
+    
+    # Wealth
+    gp = ra.randint(500, 30000) // 3 
 
     # The bonus stat is right now set to round down until I find a better way to handle this
-    stats_b = p_stats // 2
+    stg_b = stg // 2
+    agi_b = agi // 2
+    int_b = int // 2
+
+    # Morale
+    mor = stg_b + int_b // 2
+
+    # Armor Class
+    ac = agi_b + 10
+
+    # Skill Stats
+    brw = stg_b
+    dec = agi_b
+    soc = int_b
 
     # Handles random names for Cities 
     cname = [p1+s1, p1+s1+s2, p1+s1+s2+s3]
@@ -77,8 +98,9 @@ def menu():
         print(c.title + 'Strange Events: ' + c.clear + r(w.vic) + ' ' + r(w.vic2) + ' ' + r(w.vic3) + ' has been ' + r(w.vic4) + ' ' + r(w.vic5) + ' ' + r(w.vic6) + ' The case is being handled by ' + r(w.vic7) + ' and are ' + r(w.vic8) + ' solving it, and ' + r(w.vic9) + ' to share details.' + ' ' + r(w.vic10) + ' a connection to ' + r(w.vic11))
     elif gen == "3":
         clear()
-        print(c.title + 'NPC Name: ' + c.clear + r(nname) + '    ' + c.title + 'Race: ' + c.clear + r(gnd) + ' ' + r(w.rac) + '    ' + c.title + 'Class: ' + c.clear + r(w.cla) + '\n' + c.title + 'STR: ' + c.clear + str(p_stats) + c.title + '  Mod: ' + c.clear + c.fair + ' +' + str(stats_b))
-        print(c.title + 'Hostility: ' + c.clear + r(w.hos))
+        print(c.title + 'NPC Name: ' + c.clear + r(nname) + '    ' + c.title + 'Race: ' + c.clear + r(gnd) + ' ' + r(w.rac) + '    ' + c.title + 'Class: ' + c.clear + r(w.cla) + '\n' + c.title + 'STR: ' + c.clear + str(stg) + c.title + '  Mod: ' + c.clear + c.fair + ' +' + str(stg_b) + '   ' + c.title + 'AGI: ' + c.clear + str(agi) + c.title + '  Mod: ' + c.clear + c.fair + ' +' + str(agi_b) + c.clear + '   ' + c.title + 'INT: ' + c.clear + str(int) + c.title + ' Mod: ' + c.clear + c.fair + ' +' + str(int_b))
+        print(c.title + 'Armor Class: ' + c.clear + c.fair + str(ac) + c.clear + '   ' + c.title + 'Brawn: ' + c.clear + c.fair + str(brw) + c.clear + '   ' + c.title + 'Deception: ' + c.clear + c.fair + str(dec) + c.clear + '   ' + c.title + 'Social: ' + c.clear + c.fair + str(soc) + c.clear)
+        print(c.title + 'HP: ' + c.clear + c.fair + str(hit) + c.clear + '   ' + c.title + 'Hostility: ' + c.clear + r(w.hos) + '   ' + c.title + 'Morale: ' + c.clear + c.fair + str(mor) + c.clear)
     elif gen not in options:
         clear()
         print(c.poor + "Please choose a valid option from the list below!" + c.clear)
