@@ -74,7 +74,7 @@ def menu():
     elif gen == "2":
         clear()
         print(c.title + r(cvt) + c.clear + r(cname) + '   ' + c.title + 'Description:' + c.clear + ' ' + r(w.des) + '\n' + c.title + 'Population: ' + c.clear + r(population) + '   ' + c.title + 'Crime: ' + r(w.cri) + '   ' + c.title + 'Known For: ' + c.clear + r(w.mar))
-        print(c.title + 'Strange Events: ' + c.clear + r(w.vic) + ' ' + r(w.vic2) + ' ' + r(w.vic3) + ' has been ' + r(w.vic4) + ' ' + r(w.vic5) + ' ' + r(w.vic6) + ' the case is being handled by ' + r(w.vic7) + ' and are ' + r(w.vic8) + ' solving it, and are ' + r(w.vic9) + ' to share details.' + ' ' + r(w.vic10) + ' a connection to ' + r(w.vic11))
+        print(c.title + 'Strange Events: ' + c.clear + r(w.vic) + ' ' + r(w.vic2) + ' ' + r(w.vic3) + ' has been ' + r(w.vic4) + ' ' + r(w.vic5) + ' ' + r(w.vic6) + ' The case is being handled by ' + r(w.vic7) + ' and are ' + r(w.vic8) + ' solving it, and ' + r(w.vic9) + ' to share details.' + ' ' + r(w.vic10) + ' a connection to ' + r(w.vic11))
     elif gen == "3":
         clear()
         print(c.title + 'NPC Name: ' + c.clear + r(nname) + '    ' + c.title + 'Race: ' + c.clear + r(gnd) + ' ' + r(w.rac) + '    ' + c.title + 'Class: ' + c.clear + r(w.cla) + '\n' + c.title + 'STR: ' + c.clear + str(p_stats) + c.title + '  Mod: ' + c.clear + c.fair + ' +' + str(stats_b))
